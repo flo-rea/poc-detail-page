@@ -16,10 +16,6 @@ module.exports = {
     filename: 'client.js'
   },
 
-  plugins: [
-    new UmdRequirePlugin()
-  ],
-
   /*
    * resolve lets Webpack now in advance what file extensions you plan on
    * "require"ing into the web application, and allows you to drop them
