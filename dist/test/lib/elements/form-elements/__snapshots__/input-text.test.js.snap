@@ -1,0 +1,8 @@
+exports[`InputText has correct default options 1`] = `
+<input
+  disabled={true}
+  id="item2"
+  name="item2"
+  type="text"
+  value="10" />
+`;
