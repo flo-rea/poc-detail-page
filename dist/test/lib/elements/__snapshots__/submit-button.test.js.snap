@@ -1,0 +1,9 @@
+exports[`SubmitButton has correct default options 1`] = `
+<span>
+  <button
+    id="button"
+    type="submit">
+    submit-me!
+  </button>
+</span>
+`;

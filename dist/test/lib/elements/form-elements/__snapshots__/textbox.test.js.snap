@@ -1,0 +1,7 @@
+exports[`Textbox has correct default options 1`] = `
+<textarea
+  id="textbox1"
+  name="item2">
+  This is a sample textbox.
+</textarea>
+`;

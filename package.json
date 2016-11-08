@@ -1,0 +1,37 @@
+{
+  "name": "reaptor-boilerplate",
+  "version": "0.0.1",
+  "description": "boilerplate project of reaptor",
+  "main": "index.js",
+  "scripts": {
+    "test": "tslint ./src/**/*.ts ./test/**/*.ts && tsc && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athome-group/reaptor-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athome-group/reaptor-boilerplate/issues"
+  },
+  "homepage": "https://github.com/athome-group/reaptor-boilerplate#readme",
+  "devDependencies": {
+    "@types/jest": "15.1.32",
+    "@types/node": "6.0.46",
+    "@types/react": "0.14.44",
+    "@types/react-dom": "0.14.18",
+    "jest": "16.0.2",
+    "react-test-renderer": "15.3.2",
+    "ts-loader": "1.0.0",
+    "tslint": "3.15.1",
+    "typescript": "2.0.6",
+    "webpack": "1.13.3"
+  },
+  "dependencies": {
+    "react": "15.3.2",
+    "react-dom": "15.3.2",
+    "reaptor": "github:athome-group/reaptor#develop",
+    "reaptor-react-async": "github:athome-group/reaptor-react-async"
+  }
+}
