@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var UmdRequirePlugin = require('umd-require-webpack-plugin');
 
 module.exports = {
   /*
