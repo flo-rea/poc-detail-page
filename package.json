@@ -19,8 +19,6 @@
   "devDependencies": {
     "@types/jest": "15.1.32",
     "@types/node": "6.0.46",
-    "@types/react": "0.14.44",
-    "@types/react-dom": "0.14.18",
     "jest": "16.0.2",
     "react-test-renderer": "15.3.2",
     "ts-loader": "1.0.0",
@@ -29,8 +27,6 @@
     "webpack": "1.13.3"
   },
   "dependencies": {
-    "react": "15.3.2",
-    "react-dom": "15.3.2",
     "reaptor": "github:athome-group/reaptor#develop",
     "reaptor-react-async": "github:athome-group/reaptor-react-async"
   }
