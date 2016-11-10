@@ -1,10 +1,11 @@
 {
-  "name": "reaptor-boilerplate",
+  "name": "poc-detail-page",
   "version": "0.0.1",
   "description": "boilerplate project of reaptor",
   "main": "index.js",
   "scripts": {
-    "test": "tslint ./src/**/*.ts ./test/**/*.ts && tsc && jest"
+    "test": "tslint ./src/**/*.ts ./test/**/*.ts && tsc && jest",
+    "run": "tslint ./src/**/*.ts && tsc && node ./dist/src/main.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,10 @@
   },
   "homepage": "https://github.com/athome-group/reaptor-boilerplate#readme",
   "devDependencies": {
+    "@types/express": "4.0.33",
     "@types/jest": "15.1.32",
     "@types/node": "6.0.46",
+    "@types/page": "1.5.31",
     "jest": "16.0.2",
     "react-test-renderer": "15.3.2",
     "ts-loader": "1.0.0",
@@ -27,6 +30,9 @@
     "webpack": "1.13.3"
   },
   "dependencies": {
+    "express": "^4.14.0",
+    "page": "^1.7.1",
+    "react-dom": "15.3.2",
     "reaptor": "github:athome-group/reaptor#develop",
     "reaptor-react-async": "github:athome-group/reaptor-react-async"
   }

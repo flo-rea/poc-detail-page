@@ -7,7 +7,7 @@ module.exports = {
    * recursively go through every "require" statement in client.ts(x) and
    * efficiently build out the application's dependency tree.
    */
-  entry: ['./src/main.ts'],
+  entry: ['./src/client.ts'],
   target: 'web',
   devtool: 'cheap-module-eval-source-map',
   output: {
@@ -23,6 +23,12 @@ module.exports = {
   resolve: {
     extensions: ['', '.ts', '.tsx', '.js']
   },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.CLIENT': true
+    })
+  ],
 
   module: {
     /*

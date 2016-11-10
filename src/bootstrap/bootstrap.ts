@@ -1,12 +1,10 @@
 import * as Reaptor from 'reaptor';
 
 export default class Bootstrap extends Reaptor.Bootstrap.ABootstrap {
+  private static _instance: Bootstrap;
   constructor(routerAdapter?: Reaptor.Router.IAdapterRouter) {
     super();
-
-    if (routerAdapter) {
-      this.addRouter('default', new Reaptor.Router.Router(routerAdapter));
-    }
+    Bootstrap._instance = this;
   }
 
   /*
@@ -14,4 +12,17 @@ export default class Bootstrap extends Reaptor.Bootstrap.ABootstrap {
    * This file is to be used by both client and server side.
    * This is the first "universal" file of your application.
    */
+
+  public initializeRouters(routers: { [routeId: string]: Reaptor.Router.IAdapterRouter }): Bootstrap {
+    Object.keys(routers).forEach((routerId) => {
+      this.addRouter(routerId, new Reaptor.Router.Router(routers[routerId]));
+    });
+
+    return this;
+  }
+
+  public static get instance() {
+    return Bootstrap._instance;
+  }
+
 }
