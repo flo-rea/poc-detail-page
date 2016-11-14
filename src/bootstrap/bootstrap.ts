@@ -21,7 +21,7 @@ export default class Bootstrap extends Reaptor.Bootstrap.ABootstrap {
     return this;
   }
 
-  public static get instance() {
+  public static get Application() {
     return Bootstrap._instance;
   }
 

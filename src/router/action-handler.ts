@@ -5,10 +5,8 @@ import * as ReactAsync from 'reaptor-react-async';
 import ReactiveDOM from 'reaptor-react-async/lib/ReactiveDOM';
 
 import { Plop } from './plop';
-// remove that later
 
 export namespace ActionHandler {
-
     export function action(getElement: (() => JSX.Element) | undefined, req: any, res: any): any {
         if (!(getElement instanceof Function)) {
             return;
@@ -23,6 +21,7 @@ export namespace ActionHandler {
         const element = getElement();
 
         if (process.env.CLIENT) {
+            console.log('IM THE CLIENT ! :D');
             return ReactDOM.render(element, document.getElementById('app-container'));
         }
 

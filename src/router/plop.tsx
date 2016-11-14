@@ -5,7 +5,7 @@ import ReactiveDOM from 'reaptor-react-async/lib/ReactiveDOM';
 import Button from '../lib/view/elements/button';
 import Bootstrap from '../bootstrap/bootstrap';
 
-const app = Bootstrap.instance;
+const app = Bootstrap.Application;
 
 export namespace Plop {
 
@@ -19,17 +19,25 @@ export namespace Plop {
     </body>
     );
   }
+
+  function clicked() {
+    // () => console.log('go to isting !!')
+    console.log('wiojfwoifjowefjwoeijf');
+  }
+
   export function home() {
     return (
       <div>
         <div>Welcome Home!</div>
-        <div>Send me to the <Button onClick={() => goTo('/listing')}>Listing</Button></div>
+        <div>Send me to the <button onClick={clicked}>Listing</button></div>
+        <div>Send me to the <button onClick={() => goTo('listing')}>Listing</button></div>
       </div>
     );
   }
 
   function goTo(link: string) {
-    app.Router.redirectUrl(link);
+    console.log(`go ${link}`);
+    app.Router.redirect(link);
   }
 
   export function listing() {

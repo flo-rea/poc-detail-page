@@ -13,33 +13,22 @@ export default class PageRouterAdapter implements reaptor.Router.IAdapterRouter 
     this._routes = {};
   }
 
+  public start(): void {
+    this._pageApp.start();
+  }
+
   public add(route: reaptor.Router.IRoute): Promise<void> {
     const fullpath = this.getFullPath(route.path, route.requiredParameters, route.optionalParamters);
     this._routes[route.name!] = route;
 
-    const cb: PageJS.Callback = (ctx: PageJS.Context) => {
+    this._pageApp(fullpath, (ctx: PageJS.Context) => {
       ActionHandler.action(route.callback, null, null);
-
-      // let hasTimedOut = false;
-      // const idTimeout = setTimeout(() => {
-      //   hasTimedOut = true;
-      //   page('/404');
-      // }, 10000); // TODO: put the timeout value in config file.
-
-      // if (typeof (route.callback) === 'function') {
-      //   if (!hasTimedOut) {
-      //     clearTimeout(idTimeout);
-      //     route.callback();
-      //   }
-      // }
-    };
-
-    this._pageApp(fullpath, cb);
+    });
 
     return Promise.resolve();
   }
 
-  public getUrl(routeName: string, params?: {}): string {
+  public getUrl(routeName: string, params?: {}): string | never {
     const route = this._routes[routeName];
 
     if (!route) {

@@ -6,6 +6,9 @@ class PageRouterAdapter {
         this._pageApp = page;
         this._routes = {};
     }
+    start() {
+        this._pageApp.start();
+    }
     add(route) {
         const fullpath = this.getFullPath(route.path, route.requiredParameters, route.optionalParamters);
         this._routes[route.name] = route;

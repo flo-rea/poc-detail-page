@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "tslint ./src/**/*.ts ./test/**/*.ts && tsc && jest",
-    "run": "tslint ./src/**/*.ts && tsc && node ./dist/src/main.js"
+    "run": "tslint ./src/**/*.ts && webpack && tsc && node ./dist/src/main.js",
+    "run-server": "tslint ./src/**/*.ts && tsc && node ./dist/src/main.js",
+    "run-client": "webpack"
   },
   "repository": {
     "type": "git",

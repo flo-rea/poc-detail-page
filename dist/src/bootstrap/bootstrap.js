@@ -11,7 +11,7 @@ class Bootstrap extends Reaptor.Bootstrap.ABootstrap {
         });
         return this;
     }
-    static get instance() {
+    static get Application() {
         return Bootstrap._instance;
     }
 }
