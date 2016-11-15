@@ -15,7 +15,7 @@ var ActionHandler;
         }, 10000);
         const element = getElement();
         if (process.env.CLIENT) {
-            console.log('IM THE CLIENT ! :D');
+            clearTimeout(idTimeout);
             return ReactDOM.render(element, document.getElementById('app-container'));
         }
         const renderedElement = ReactiveDOM_1.default.renderToStaticMarkup(plop_1.Plop.serverRendering(element));

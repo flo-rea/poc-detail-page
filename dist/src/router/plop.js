@@ -1,8 +1,8 @@
 "use strict";
+const Reaptor = require('reaptor');
 const React = require('react');
-const button_1 = require('../lib/view/elements/button');
 const bootstrap_1 = require('../bootstrap/bootstrap');
-const app = bootstrap_1.default.Application;
+const Button = Reaptor.Button.Button;
 var Plop;
 (function (Plop) {
     function serverRendering(elements) {
@@ -27,18 +27,18 @@ var Plop;
     Plop.home = home;
     function goTo(link) {
         console.log(`go ${link}`);
-        app.Router.redirect(link);
+        bootstrap_1.default.Application.Router.redirect(link);
     }
     function listing() {
         return (React.createElement("ul", null, 
             React.createElement("li", null, 
-                React.createElement(button_1.default, {onClick: () => goTo('home')}, "link 1")
+                React.createElement(Button, {onClick: () => goTo('home')}, "link 1")
             ), 
             React.createElement("li", null, 
-                React.createElement(button_1.default, {onClick: () => goTo('home')}, "link 2")
+                React.createElement(Button, {onClick: () => goTo('home')}, "link 2")
             ), 
             React.createElement("li", null, 
-                React.createElement(button_1.default, {onClick: () => goTo('home')}, "link 3")
+                React.createElement(Button, {onClick: () => goTo('home')}, "link 3")
             )));
     }
     Plop.listing = listing;

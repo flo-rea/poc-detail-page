@@ -1,5 +1,3 @@
-import * as Reaptor from 'reaptor';
-import * as React from 'react';
 import Bootstrap from './bootstrap/bootstrap';
 import PageRouterAdapter from './router/page-router-adapter';
 import routeConfig from './router/routes.config';
@@ -15,8 +13,6 @@ app
   .setDefaultRouter('default')
   .start(routeConfig)
   .then(() => {
-    // app.Router.redirect('home');
-    // (app as any).Router.start();
-    (app as any).Router.Router.start();
+    (app.Router.Router as PageRouterAdapter).start();
     console.log('gogogo');
   });

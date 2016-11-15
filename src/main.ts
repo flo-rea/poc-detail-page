@@ -1,5 +1,3 @@
-import * as Reaptor from 'reaptor';
-import * as React from 'react';
 import Bootstrap from './bootstrap/bootstrap';
 import * as express from 'express';
 import ExpressRouterAdapter from './router/express-router-adapter';

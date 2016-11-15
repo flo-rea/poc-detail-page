@@ -1,11 +1,14 @@
+import * as Reaptor from 'reaptor';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as ReactAsync from 'reaptor-react-async';
 import ReactiveDOM from 'reaptor-react-async/lib/ReactiveDOM';
-import Button from '../lib/view/elements/button';
+// import Button from '../lib/view/elements/button';
 import Bootstrap from '../bootstrap/bootstrap';
 
-const app = Bootstrap.Application;
+const Button = Reaptor.Button.Button;
+
+// const app = Bootstrap.Application;
 
 export namespace Plop {
 
@@ -37,7 +40,7 @@ export namespace Plop {
 
   function goTo(link: string) {
     console.log(`go ${link}`);
-    app.Router.redirect(link);
+    Bootstrap.Application.Router.redirect(link);
   }
 
   export function listing() {

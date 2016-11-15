@@ -13,7 +13,7 @@ export default class Bootstrap extends Reaptor.Bootstrap.ABootstrap {
    * This is the first "universal" file of your application.
    */
 
-  public initializeRouters(routers: { [routeId: string]: Reaptor.Router.IAdapterRouter }): Bootstrap {
+  public initializeRouters(routers: { [routerId: string]: Reaptor.Router.IAdapterRouter }): Bootstrap {
     Object.keys(routers).forEach((routerId) => {
       this.addRouter(routerId, new Reaptor.Router.Router(routers[routerId]));
     });

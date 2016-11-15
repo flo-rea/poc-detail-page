@@ -1,7 +1,0 @@
-exports[`Radio has correct default options 1`] = `
-<input
-  checked={true}
-  id="item2"
-  name="item2"
-  type="radio" />
-`;

@@ -21,7 +21,7 @@ export namespace ActionHandler {
         const element = getElement();
 
         if (process.env.CLIENT) {
-            console.log('IM THE CLIENT ! :D');
+            clearTimeout(idTimeout);
             return ReactDOM.render(element, document.getElementById('app-container'));
         }
 

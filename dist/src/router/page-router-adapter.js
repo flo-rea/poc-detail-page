@@ -12,10 +12,9 @@ class PageRouterAdapter {
     add(route) {
         const fullpath = this.getFullPath(route.path, route.requiredParameters, route.optionalParamters);
         this._routes[route.name] = route;
-        const cb = (ctx) => {
+        this._pageApp(fullpath, (ctx) => {
             action_handler_1.ActionHandler.action(route.callback, null, null);
-        };
-        this._pageApp(fullpath, cb);
+        });
         return Promise.resolve();
     }
     getUrl(routeName, params) {

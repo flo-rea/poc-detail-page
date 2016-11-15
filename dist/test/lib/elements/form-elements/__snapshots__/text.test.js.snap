@@ -1,5 +1,0 @@
-exports[`Text (label) has correct default options 1`] = `
-<label
-  for="item2"
-  id="item2" />
-`;
